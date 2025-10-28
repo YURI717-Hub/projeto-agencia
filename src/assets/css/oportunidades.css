@@ -1,0 +1,109 @@
+.conteudo {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+
+.filtros form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filtros input,
+.filtros select,
+.filtros button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filtros button {
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filtros button:hover {
+  background-color: #fff;
+  border: #000 1px solid;
+  color: #000;
+}
+
+/* Cards de vagas */
+.lista-vagas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.vaga-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.vaga-card h3 {
+  margin-top: 0;
+}
+
+.vaga-card button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.vaga-card button:hover {
+  background-color: #fff;
+  border: #000 1px solid;
+  color: #000;
+}
+
+.imagem-topo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.imagem-topo img {
+  width: 100%;         
+  max-width: 900px;    
+  height: auto;        
+  max-height: 200px;   
+  object-fit: cover;   
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+
+/* Telas menores que 600px */
+@media (max-width: 600px) {
+  .filtros form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtros input,
+  .filtros select,
+  .filtros button {
+    width: 100%;
+  }
+}
+
