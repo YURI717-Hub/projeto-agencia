@@ -1,18 +1,16 @@
-
-import Header from "./components/header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/header"; // ou o caminho onde ele está
 import Main from "./components/Main";
-import Footer from "./components/footer";
-import ModalLogin from "./components/ModalLogin";
+import Oportunidade from "./components/oportunidade"; // caminho do seu arquivo de oportunidades
 
-function App() {
+export default function App() {
   return (
-    <>
+    <Router>
       <Header />
-      <Main />
-      <ModalLogin />
-      <Footer />
-    </>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/oportunidades" element={<Oportunidade />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;

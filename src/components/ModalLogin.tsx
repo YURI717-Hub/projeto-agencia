@@ -1,6 +1,7 @@
 import '../assets/css/style.css'
 import usuario from '../assets/img/usuario.png';
-import emprego from '../assets/img/emprego.png'
+import emprego from '../assets/img/emprego.png';
+
 function ModalLogin() {
   return (
     <div
