@@ -67,11 +67,14 @@ function Sobre() {
       <div className="cta text-center mt-4">
         <p>
           <strong>É jovem e quer se candidatar?</strong>{" "}
-          <a href="#">Cadastre-se aqui</a>
+          <a href="#"   data-bs-toggle="modal"
+                data-bs-target="#authModal">Cadastre-se aqui</a>
         </p>
         <p>
           <strong>É empresa e quer contratar?</strong>{" "}
-          <a href="#">Cadastre-se aqui</a>
+          <a href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#authModal">Cadastre-se aqui</a>
         </p>
       </div>
     </div>

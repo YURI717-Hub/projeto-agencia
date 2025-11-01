@@ -16,7 +16,7 @@ function Main() {
               <button
                 className="btn btn-dark me-2"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#authModal"
               >
                 Cadastrar
               </button>

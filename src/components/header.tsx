@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { ref, set, get } from "firebase/database";
 import { auth, db } from "../firebaseConfig";
 import logo from "../assets/img/banner-logo.png";
 import usuario from "../assets/img/usuario.png";
 import emprego from "../assets/img/emprego.png";
+import Perfil from "../assets/img/perfil.png";
+import "../assets/css/style.css";
 
 function Header() {
   const [tipoAtual, setTipoAtual] = useState("login"); // login | cadastro
@@ -31,7 +34,8 @@ function Header() {
               nome: formData.get("nome"),
               idade: formData.get("idade"),
               telefone: formData.get("telefone"),
-              escolaridade: formData.get("escolaridade")
+              escolaridade: formData.get("escolaridade"),
+              senha: formData.get("senha")
             }
           : {
               tipo: "empresa",
@@ -39,10 +43,10 @@ function Header() {
               cnpj: formData.get("cnpj"),
               area: formData.get("area"),
               descricao: formData.get("descricao"),
-              representante: formData.get("representante"),
               telefone: formData.get("telefone"),
-              cargo: formData.get("cargo")
-            };
+              cargo: formData.get("cargo"),
+              email: formData.get("email"),
+              senha: formData.get("senha")            };
 
         await set(ref(db, `usuarios/${uid}`), dados);
         window.location.href = dados.tipo === "usuario" ? "/oportunidades" : "/anunciar";
@@ -57,7 +61,7 @@ function Header() {
         const uid = userCredential.user.uid;
         const snapshot = await get(ref(db, `usuarios/${uid}`));
         const dados = snapshot.val();
-        window.location.href = dados.tipo === "usuario" ? "/vagas" : "/anunciar";
+        window.location.href = dados.tipo === "usuario" ? "/oportunidades" : "/anunciar";
       } catch (error) {
         console.error("Erro no login:", error);
       }
@@ -88,7 +92,7 @@ function Header() {
             <input name="cnpj" type="text" placeholder="CNPJ" className="form-control mb-2" />
             <input name="area" type="text" placeholder="Área de Atuação" className="form-control mb-2" />
             <textarea name="descricao" className="form-control mb-2" placeholder="Descrição da Empresa"></textarea>
-            <input name="representante" type="email" placeholder="Email do Representante" className="form-control mb-2" />
+
             <input name="telefone" type="tel" placeholder="Telefone/WhatsApp" className="form-control mb-2" />
             <input name="cargo" type="text" placeholder="Cargo" className="form-control mb-2" />
           </>
@@ -119,28 +123,33 @@ function Header() {
         
                <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+             <Link className="nav-link" to={"/"}>Home</Link>
+             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/index.html">Início</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/Oportunidade.tsx">Oportunidades</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="./assets/pages/sobre.html">Sobre</a>
-            </li>
+             <Link className="nav-link" to={"../Oportunidades"}>Oportunidades</Link>
+             </li>
+             <li className="nav-item">
+             <Link className="nav-link" to={"../Sobre"}>Sobre</Link>
+             </li>
+  
           </ul>
-
-       
-        
+          
+            <div className="auth-section ms-auto">
+              <Link className="perfil" to={"../Perfil"}> <img src={Perfil} alt="logo"  /></Link> 
+              
+              
+                        <button
+                className="btn btn-dark ms-auto"
+                data-bs-toggle="modal"
+                data-bs-target="#authModal"
+              >
+                Cadastro / Login
+              </button>
+            </div>
              
           </div>
-            <button
-              className="btn btn-dark ms-auto"
-              data-bs-toggle="modal"
-              data-bs-target="#authModal"
-            >
-              Cadastro / Login
-            </button>
+       
           </div>
         </nav>
       </header>

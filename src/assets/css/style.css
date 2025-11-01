@@ -3,7 +3,24 @@ html, body {
     height: 100%;
     margin: 0;
   }
-
+  .auth-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* espaço entre ícone e botão */
+  }
+  
+  .perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+.perfil:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
   
   main {
     flex: 1; /* Isso empurra o footer para o final */
