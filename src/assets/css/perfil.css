@@ -1,0 +1,31 @@
+.button-gen{
+    display: flex;
+    
+}
+.button-gen button{
+    width: 100%;
+    padding: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+.bt{
+    border: 1px solid gray;
+    background-color: white;
+}
+.bt:hover{
+    border: none;
+    background-color: gray;
+    color: white;
+}
+.main{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.Title{
+    margin-top: 2%;
+}
+.salvar{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}

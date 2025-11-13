@@ -4,7 +4,8 @@ import Footer from "./components/footer"; // ou o caminho onde ele está
 import Main from "./components/Main";
 import Oportunidade from "./components/oportunidade";
 import Sobre from "./components/Sobre"; // caminho do seu arquivo de oportunidades
-import Perfil from "./components/perfil";
+import Perfil from "./components/Perfil";
+import Anuncia from "./components/Anunciar";
 
 
 export default function App() {
@@ -16,6 +17,8 @@ export default function App() {
         <Route path="/oportunidades" element={<Oportunidade />} />
          <Route path="/sobre" element={<Sobre />} />
          <Route path="/perfil" element={<Perfil />} />
+         <Route path="/Anuncia" element={<Anuncia/> }/>
+          
       </Routes>
       <Footer />
     </Router>

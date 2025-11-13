@@ -107,3 +107,80 @@ h2 {
   }
 }
 
+.vaga-card-catho {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.vaga-card-catho:hover {
+  transform: scale(1.01);
+}
+
+.tag {
+  color: #000000;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.titulo {
+  color: #000000;
+  margin: 6px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.empresa {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.info {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.descricao {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.btn-leia-mais {
+  background: none;
+  border: none;
+  color: #070707;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.btn-leia-mais:hover {
+  text-decoration: underline;
+}
+
+.btn-candidatar {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-candidatar:hover {
+  background-color: #020202;
+}
