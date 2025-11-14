@@ -1,5 +1,6 @@
 import '../assets/css/style.css'
 import pessoa from '../assets/img/pessoa.png'
+import { Link } from "react-router-dom";
 
 function Main() {
   return (
@@ -14,12 +15,16 @@ function Main() {
             </h2>
             <div className="mt-4">
               <button
-                className="btn btn-dark me-2"
+                className="aproxi btn btn-dark me-2"
                 data-bs-toggle="modal"
                 data-bs-target="#authModal"
               >
                 Cadastrar
               </button>
+              
+             
+                <Link to={"/Oportunidades"}><button className='btn btn-dark me-2 btn-custom apro'>Ver Vagas</button> </Link>
+              
             </div>
           </div>
 
@@ -33,13 +38,13 @@ function Main() {
         {/* Seção 2 */}
         <div className="row text-center bg-light py-4 rounded">
           <div className="col-md-4 mb-3 mb-md-0">
-            <div className="bg-dark text-white p-4 rounded">Dado 1</div>
+            <div className="bg-dark text-white p-4 rounded"><span className='aume'>71%</span> <br />  Se sentem perdidos na hora de entrar no mercado <br />  <span className='preto'>.</span></div>
           </div>
           <div className="col-md-4 mb-3 mb-md-0">
-            <div className="bg-dark text-white p-4 rounded">Dado 2</div>
+            <div className="bg-dark text-white p-4 rounded"> <span className='aume'>78%</span> <br /> dos Jovens não conseguem o primeiro emprego por falta de experiência71% <br /> </div>
           </div>
           <div className="col-md-4">
-            <div className="bg-dark text-white p-4 rounded">Dado 3</div>
+            <div className="bg-dark text-white p-4 rounded"><span className='aume'>63%</span> <br /> não têm portfólio para mostrar o própio potencial <br /> <span className='preto'> .</span></div>
           </div>
         </div>
 
@@ -51,13 +56,13 @@ function Main() {
         </div>
         <div className="row text-center">
           <div className="col-md-4 mb-3 mb-md-0">
-            <div className="border p-4 rounded">Motivo 1</div>
+            <div className="border p-4 rounded">Nós guiamos você em cada passo</div>
           </div>
           <div className="col-md-4 mb-3 mb-md-0">
-            <div className="border p-4 rounded">Motivo 2</div>
+            <div className="border p-4 rounded">Nós ajudamos a você a quebrar esse ciclo</div>
           </div>
           <div className="col-md-4">
-            <div className="border p-4 rounded">Motivo 3</div>
+            <div className="border p-4 rounded">Criamos sua presença profissonal</div>
           </div>
         </div>
       </div>

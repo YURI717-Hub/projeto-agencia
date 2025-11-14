@@ -214,4 +214,45 @@ input[type ="submit"]:hover{
   opacity: 1;
   transform: translateY(0);
 }
+.btn-custom {
+  background-color: #1e1f21;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+
+  padding: 8px 18px !important; /* 🔥 força o mesmo tamanho */
+  width: auto !important;       /* garante que não fique largo demais */
+  height: 38px !important;      /* 🔥 mesma altura para todos */
+text-align: center;
+  white-space: nowrap;          /* impede quebrar linha */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-custom:hover {
+  background-color: #2a2c2e;
+}
+.btn-custom{
+  width: 130px !important; 
+}
+.btn-link{
+  color:#fff;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+.btn-link:hover{
+  color: #fff
+}
+
+.aume{
+  font-size: 150%;
+}
+ .preto{
+  color: #000;
+ }
+
 

@@ -6,14 +6,9 @@ function Sobre() {
   return (
     <div className="container">
       {/* Imagem de Banner (antes da missão) */}
-      <div className="banner mb-4 img-1 ">
-        <img
-          src={Banner}
-          alt="Imagem representativa da agência"
-          className="img-fluid"
-        />
-      </div>
-
+      <br />
+      <br />
+  
       {/* Seção 'Nossa Missão' */}
       <h2 className="titulo-na">Nossa Missão</h2>
       <p>
